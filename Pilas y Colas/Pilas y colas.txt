@@ -1,0 +1,19 @@
+En la carpeta de Pilas y colas podemos encontrar varios archivos.
+Que explicare a continuacion:
+
+>pilaejemplo1.php
+    El código en PHP crea un arreglo vacío llamado $pila. Luego, utiliza la función array_push 
+    para agregar varios elementos (de "elemento 1" a "elemento 9") al arreglo. Después de agregar 
+    los elementos, se utiliza array_pop para eliminar y devolver el último elemento agregado al arreglo, 
+    que en este caso es "elemento 9". Finalmente, se imprime un mensaje que indica cuál fue 
+    el último elemento ingresado a la pila.
+
+    El código también incluye una sección comentada que muestra cómo se podría crear otro arreglo vacío ($pila2), 
+    agregarle elementos y luego eliminar el último elemento, pero esta parte no se ejecuta. 
+
+> colaejemplo.php
+    El código en PHP crea un arreglo vacío llamado $cola. Luego, utiliza la función array_push para 
+    agregar varios elementos de frutas (como "Manzana", "Papaya", "Banano", "Piña", "Mango", "Guanabana" y "Mandarina") 
+    al arreglo. Después de agregar los elementos, se utiliza array_shift para extraer y devolver 
+    el primer elemento de la cola, que en este caso es "Manzana". Finalmente, se imprime un mensaje 
+    que indica cuál es la fruta que toca comer hoy. 

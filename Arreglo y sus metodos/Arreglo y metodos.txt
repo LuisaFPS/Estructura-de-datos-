@@ -1,0 +1,65 @@
+En la carpeta de arreglo y sus metodos podemos encontrar varios archivos.
+Que explicare a continuacion:
+
+> array.php
+    El código en PHP realiza operaciones con arreglos. Primero, define un arreglo 
+    llamado $ropa con elementos como "camiseta", "pantalon", "vestido" y "short". 
+    Luego, añade "buso" al final de este arreglo y lo imprime.
+
+    A continuación, define otro arreglo llamado $fruta con elementos
+    como "fresas", "manzana", "banano" y "durazno". Elimina el 
+    elemento "banano" del arreglo y lo imprime.
+
+    Después, busca el elemento "short" en el arreglo $ropa y, si lo encuentra,
+    lo elimina. Finalmente, imprime el arreglo $ropa actualizado.
+
+> combinararray.php
+    El código en PHP define dos arreglos asociativos: el primero, $datos1, contiene 
+    información sobre una persona (nombre, edad y correo), y el segundo, $datos2, 
+    incluye datos sobre la ciudad y la profesión. Luego, combina ambos arreglos en un 
+    nuevo arreglo llamado $datosCombinados utilizando la función array_merge. Finalmente, 
+    imprime el contenido del arreglo combinado, que incluye todos los pares clave-valor 
+    de los dos arreglos originales.
+
+> extraerarray.php
+    El código en PHP realiza varias operaciones con arreglos. Primero, define un arreglo 
+    llamado $ropa que contiene elementos como "camiseta", "pantalon", "vestido" y "short". 
+    Luego, añade "buso" al final del arreglo y lo imprime.
+
+    A continuación, se define otro arreglo llamado $fruta con elementos como 
+    "fresas", "manzana", "banano" y "durazno". Se elimina el elemento "banano" 
+    y se imprime el arreglo resultante.
+
+    Después, se busca el elemento "short" en el arreglo $ropa y, si se encuentra, 
+    se elimina. Luego, se modifica el segundo elemento del arreglo $ropa, cambiando 
+    "pantalon" por "ombligera", y se imprime el arreglo actualizado.
+
+    Finalmente, se utiliza array_slice para obtener un subconjunto del arreglo $ropa, 
+    comenzando desde el índice 1 y tomando 2 elementos, y se imprime este subconjunto.
+
+> filtrarArreglo.php
+    El código en PHP define un arreglo llamado $numero que contiene varios números. 
+    Luego, utiliza la función array_filter para filtrar los elementos del arreglo, 
+    manteniendo solo aquellos que son mayores a 12. Esto se logra mediante una 
+    función anónima (callback) que evalúa cada valor del arreglo. Finalmente, 
+    se imprime el arreglo resultante, que contiene únicamente los números que cumplen 
+    con la condición de ser mayores a 12. 
+
+> modificararray.php
+    El código en PHP realiza varias operaciones con arreglos. Primero, se define un 
+    arreglo llamado $ropa que contiene elementos como "camiseta", "pantalon", "vestido" y "short". 
+    Luego, se añade "buso" al final del arreglo y se imprime el contenido actualizado.
+
+    A continuación, se define otro arreglo llamado $fruta con elementos como 
+    "fresas", "manzana", "banano" y "durazno". Se elimina el elemento "banano" del arreglo 
+    y se imprime el resultado.
+
+    Después, se busca el elemento "short" en el arreglo $ropa. Si se encuentra, se elimina. 
+    Luego, se modifica el segundo elemento del arreglo $ropa, cambiando "pantalon" por "ombligera", 
+    y se imprime el arreglo actualizado.
+
+>ordenarArray.php
+    El código en PHP define un arreglo asociativo llamado $edades, que contiene nombres como claves 
+    y sus respectivas edades como valores. Luego, utiliza la función asort para ordenar el arreglo 
+    en orden ascendente según los valores (edades). Finalmente, imprime el arreglo ordenado, mostrando 
+    las edades de menor a mayor junto con los nombres correspondientes. 
