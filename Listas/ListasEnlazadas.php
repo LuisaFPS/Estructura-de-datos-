@@ -1,36 +1,48 @@
 <?php
 
-class Nodo{
+class Nodo {
+    public $dato;
+    public $next;
 
-    public $siguiente;
-        public function construct($dato){
-            $this->dato = $dato;
-            $this->siguiente = null;
-        }
+    public function __construct($dato) {
+        $this->dato = $dato;
+        $this->next = null;
+    }
 }
 
-class ListaEnlazada(){
+class ListaEnlazada {
     public $cabeza;
-    public function __construct(){
+
+    public function __construct() {
         $this->cabeza = null;
     }
 
-    public function insertar($dato){
-        $nuevoNodo = new Nodo($dato);
-        $nuevoNodo->siguiente=$this-cabeza;
-        $this->cabeza=$nuevoNodo;
+    public function insertar($dato): void {
+        $nuevonodo = new Nodo($dato);
+        $nuevonodo->next = $this->cabeza;
+        $this->cabeza = $nuevonodo;
     }
 
-    public imprimirHTML(){
+    public function imprimirHTML(): void {
         $actual = $this->cabeza;
-        echo"<ul>";
+        echo "<ul>";
 
-        while($actual!=null)
-        echo "<li>".$actual."</li>";
-        $actual=$actual->siguiente;
+        while ($actual != null) {
+            echo "<li>" . $actual->dato . "</li>";
+            $actual = $actual->next;
+        }
 
-        echo"</ul>";
+        echo "</ul>";
     }
-}    
+}
+
+// Uso de la lista
+$lista = new ListaEnlazada();
+
+$lista->insertar("Elemento 1");
+$lista->insertar("Elemento 2");
+$lista->insertar("Elemento 3");
+
+$lista->imprimirHTML();
 
 ?>
