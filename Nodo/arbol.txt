@@ -1,0 +1,93 @@
+Explicación del código PHP: Árbol Binario de Búsqueda
+
+Este código en PHP implementa un Árbol Binario de Búsqueda (ABB), estructura de datos que almacena elementos de forma jerárquica y permite realizar búsquedas, inserciones y recorridos ordenados de manera eficiente.
+
+1. Clase Nodo
+-------------
+class Nodo {
+  public $valor;
+  public $izquierdo;
+  public $derecho;
+
+  public function __construct($valor){
+    $this->valor = $valor;
+    $this->izquierdo = null;
+    $this->derecho = null;
+  }
+}
+
+- Representa un nodo del árbol.
+- Cada nodo almacena:
+  -> Un valor.
+  -> Referencia al subárbol izquierdo.
+  -> Referencia al subárbol derecho.
+
+2. Clase ArbolBinario
+---------------------
+Esta clase representa el árbol binario como tal.
+
+Propiedad:
+- $raiz: representa la raíz del árbol.
+
+Métodos:
+
+- __construct():
+  Inicializa el árbol vacío.
+
+- insertar($valor):
+  Inserta un valor en el árbol utilizando recursión.
+
+- insertarRec($nodo, $valor):
+  Función recursiva que coloca el nuevo valor en su lugar correcto:
+  -> Si el valor es menor, se va a la izquierda.
+  -> Si es mayor, se va a la derecha.
+  -> Si es igual, no se inserta (puedes modificarlo si deseas permitir duplicados).
+
+3. Recorridos del Árbol
+------------------------
+
+- inOrden():
+  Muestra los valores en orden creciente.
+  Visita: Izquierdo -> Nodo -> Derecho
+
+- preOrden():
+  Visita: Nodo -> Izquierdo -> Derecho
+
+- postOrden():
+  Visita: Izquierdo -> Derecho -> Nodo
+
+Cada recorrido se implementa con su respectiva función recursiva:
+- inOrdenRec($nodo)
+- preOrdenRec($nodo)
+- postOrdenRec($nodo)
+
+4. Uso del Árbol
+----------------
+
+$arbol = new ArbolBinario();
+
+Se insertan los siguientes valores en el árbol:
+50, 30, 77, 25, 40, 69, 88
+
+Esto construye el siguiente árbol binario:
+
+            50
+           /  \
+         30    77
+        /  \   / \
+      25   40 69 88
+
+5. Salida esperada:
+-------------------
+Recorrido inorden
+25 30 40 50 69 77 88 
+
+Recorrido preorden
+50 30 25 40 77 69 88 
+
+Recorrido postorden
+25 40 30 69 88 77 50 
+
+Estos resultados reflejan la forma en que se visitan los nodos según cada tipo de recorrido.
+
+Fin del documento.

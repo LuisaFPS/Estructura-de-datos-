@@ -1,0 +1,86 @@
+Explicación del código PHP: Clase Grafo
+
+Este programa en PHP implementa una clase llamada "Grafo" que permite crear y manejar un grafo no dirigido mediante listas de adyacencia.
+
+1. Definición de la clase:
+---------------------------
+class Grafo {
+    public $Vertice;
+    public $Arista;
+
+    public function __construct() {
+        $this->Vertice = array();
+        $this->Arista = array();
+    }
+
+- La clase tiene dos atributos:
+  -> $Vertice: almacena los vértices del grafo.
+  -> $Arista: es un arreglo asociativo que almacena las conexiones (aristas) de cada vértice.
+
+2. Método AgregarVertices($Vertice):
+------------------------------------
+public function AgregarVertices($Vertice): void {
+    $this->Vertice[] = $Vertice;
+    $this->Arista[$Vertice] = array();
+}
+
+- Agrega un nuevo vértice al grafo.
+- También inicializa su lista de adyacencia como un arreglo vacío.
+
+3. Método AgregarArista($Vertice1, $Vertice2):
+----------------------------------------------
+public function AgregarArista($Vertice1 ,$Vertice2 ) {
+    $this->Arista[$Vertice1][] = $Vertice2;
+    $this->Arista[$Vertice2][] = $Vertice1;
+}
+
+- Crea una conexión (arista) entre dos vértices.
+- Como el grafo es no dirigido, se añade en ambas direcciones.
+
+4. Método ImprimirArista():
+---------------------------
+public function ImprimirArista() {
+    foreach($this->Vertice as $Vertice) {
+        echo $Vertice." Esta conectado ";
+        foreach($this->Arista[$Vertice] as $Item) {
+            echo $Item.",";
+        }
+        echo "<br>";
+    }
+}
+
+- Recorre todos los vértices del grafo.
+- Para cada vértice, muestra con qué otros vértices está conectado.
+
+5. Uso del grafo:
+-----------------
+$MiGrafo = new Grafo();
+$MiGrafo->AgregarVertices("A");
+$MiGrafo->AgregarVertices("B");
+$MiGrafo->AgregarVertices("C");
+$MiGrafo->AgregarVertices("D");
+$MiGrafo->AgregarVertices("E");
+
+$MiGrafo->AgregarArista("A","B");
+$MiGrafo->AgregarArista("B","C");
+$MiGrafo->AgregarArista("C","D");
+$MiGrafo->AgregarArista("D","E");
+$MiGrafo->AgregarArista("E","A");
+
+$MiGrafo->ImprimirArista();
+
+- Se crean 5 vértices: A, B, C, D, E.
+- Se conectan formando un ciclo: A-B-C-D-E-A.
+- Finalmente, se imprime la lista de adyacencia.
+
+6. Resultado esperado:
+----------------------
+A Esta conectado B,E,
+B Esta conectado A,C,
+C Esta conectado B,D,
+D Esta conectado C,E,
+E Esta conectado D,A,
+
+Esto muestra que cada vértice está conectado a sus vecinos, formando un grafo cíclico.
+
+Fin del documento.
